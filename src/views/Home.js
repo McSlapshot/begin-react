@@ -17,9 +17,9 @@ export default class Home extends Component {
   render() {
     return (
     <div>
-        {this.props.age}
-    <img src ='https://media0.giphy.com/media/g1n3pswjr0ouc/giphy.gif' /> 
-    <h3>My name is {this.state['name']}, I am {this.state['age']} years old</h3>
+        
+    <img src ='https://media0.giphy.com/media/g1n3pswjr0ouc/giphy.gif' alt='..'/> 
+    <h3>My name is {this.state['name']}, I am {this.props.age} years old</h3>
     <button onClick={()=>{this.props.x()}} >Add to age +</button>
     </div>
     )
