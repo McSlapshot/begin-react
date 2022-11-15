@@ -8,6 +8,7 @@ import News from './views/News';
 import IG from './views/IG';
 import SignUp from './views/SignUp';
 import CreatePost from './views/CreatePost';
+import IndividualPost from './views/IndividualPost';
 
 export default class App extends Component {
   constructor() {
@@ -59,6 +60,7 @@ export default class App extends Component {
             <Route path='/feed' element={<IG />}/>
             <Route path='/news' element={<News />}/>
             <Route path='/posts/create' element={<CreatePost user={this.state.user}/>}/>
+            <Route path= '/posts/:postId' element= {<IndividualPost />}/>
 
 
           </Routes>

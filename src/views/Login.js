@@ -8,7 +8,7 @@ export default class Login extends Component {
       const username = e.target.username.value
       const password = e.target.password.value
 
-      const res = await fetch('http://localhost:5000/login', {
+      const res = await fetch('http://127.0.0.1:5000/API/login', {
           method: "POST",
           body: JSON.stringify({
               username: username,
@@ -57,7 +57,7 @@ export default class Login extends Component {
       return (
           <div>
               <h1>Log In</h1>
-              <form onSubmit={(e) => { this.sendBasicAuthInfo(e) }}>
+              <form onSubmit={(e) => { this.sendLoginInfo(e) }}>
                   <input placeholder='Username' name='username' className='form-control' type='text' />
                   <input placeholder='Password' name='password' className='form-control' type='password' />
                   <button type='submit' className='btn btn-primary'>Submit</button>
